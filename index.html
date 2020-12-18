@@ -43,7 +43,6 @@
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
                     <a href="#productos">Conocelas</a>
                 </section>
-                <!-- <img src="img/primeraIlustracion.svg" alt=""> -->
             </section>
         </div>
     </header>
@@ -55,40 +54,41 @@
             <h2 class="titulo" id="productos">Estos son nuestros productos</h2>
             <div class="contenedor-articulo">
                 <div class="articulo" data-aos="zoom-in-right">
-                    <div class="card">
+                    
                         <img class="card-img-top imagenProducto" src="https://images.pexels.com/photos/4277508/pexels-photo-4277508.jpeg" alt="Card image cap">
                         <div class="card-block textoProducto">
                             <h4 class="card-title">Nike Air Force I</h4>
                             <p class="card-text">Precio: $8.000</p>
-                            <a href="#" data-name="Air-Force-I" data-price="8000" class="add-to-cart btn btn-primary">Agregar al carrito</a>
+                            <a href="#" data-name="Air-Force-I" data-price="8000" class="add-to-cart btn btn-primary botonProducto">Agregar al carrito</a>
                         </div>
-                    </div>
+                    
                 </div>
                 <div class="articulo" data-aos="zoom-in-right">
-                    <div class="card">
+                    
                         <img class="card-img-top imagenProducto" src="https://images.pexels.com/photos/2385477/pexels-photo-2385477.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Card image cap">
                         <div class="card-block textoProducto">
                             <h4 class="card-title">Nike Jordan 1</h4>
                             <p class="card-text">Precio: $15.000</p>
-                            <a href="#" data-name="Jordan-1" data-price="15000" class="add-to-cart btn btn-primary">Agregar al carrito</a>
+                            <a href="#" data-name="Jordan-1" data-price="15000" class="add-to-cart btn btn-primary botonProducto">Agregar al carrito</a>
                         </div>
-                    </div>
+                    
                 </div>
                 <div class="articulo" data-aos="zoom-in-right">
-                    <div class="card">
+                    
                         <img class="card-img-top imagenProducto" src="https://images.pexels.com/photos/2404959/pexels-photo-2404959.png?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Card image cap">
                         <div class="card-block textoProducto">
                             <h4 class="card-title">Nike Air Max</h4>
                             <p class="card-text">Precio: $12.000</p>
-                            <a href="#" data-name="Air-Max" data-price="12000" class="add-to-cart btn btn-primary">Agregar al carrito</a>
-                        </div>
+                            <a href="#" data-name="Air-Max" data-price="12000" class="add-to-cart btn btn-primary botonProducto">Agregar al carrito</a>
+                        
                     </div>
                 </div>
             </div>
             <div>
                 <div class="row">
                     <div class="col carritoBotones">
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cart">Carrito (<span class="total-count"></span>)</button><button class="clear-cart btn btn-danger">Vaciar Carrito</button>
+                        <button type="button" class="btn btn-primary botonCarrito" data-toggle="modal" data-target="#cart">Carrito (<span class="total-count"></span>)</button>
+                        <button class="clear-cart btn btn-danger botonVaciar">Vaciar Carrito</button>
                     </div>
                 </div>
             </div>
@@ -113,8 +113,8 @@
                     <div>Precio total: $<span class="total-cart"></span></div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                    <button type="button" class="btn btn-primary" onclick="hacerGet()">Comprar</button>
+                    <button type="button" class="btn btn-secondary botonCerrar" data-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary botonCarrito" onclick="hacerGet()">Comprar</button>
                 </div>
             </div>
         </div>
@@ -125,7 +125,8 @@
     <section class="questions contenedor" id="nosotros">
         <section class="textos-questions">
             <h1>Somos Clash Shoes</h1>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit, dolorum.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto laborum quaerat esse distinctio sapiente nostrum?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, blanditiis?</p>
         </section>
         <img src="img/6340.jpg" alt="" data-aos="zoom-out-up" data-aos-duration="2000">
     </section>
@@ -159,52 +160,41 @@
     </section>
 
     <!--Formulario-->
-
-    <section class="contenedor1 services" id="contacto">
-            <div class="contact">
-                <div class="container">
-                    <div class="row">
-                        <div class="col">
-                            <div class="review_form_container">
-                                <div class="review_form_title">Contactanos!</div>
-                                <div class="review_form_content">
-                                    <form action="#" id="review_form" class="review_form">
-                                        <div class="d-flex flex-md-row flex-column align-items-start justify-content-between">
-                                            <input type="text" class="review_form_input" placeholder="Nombre" required="required">
-                                            <input type="email" class="review_form_input" placeholder="E-mail" required="required">
-                                            <input type="text" class="review_form_input" placeholder="Asunto">
-                                        </div>
-                                        <textarea class="review_form_text" name="review_form_text" placeholder="Mensaje"></textarea>
-                                        <button type="submit" class="review_form_button">Enviar</button>
-                                    </form>
+    <div class="contact" id="contacto">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="review_form_container">
+                        <div class="review_form_title">Contactanos!</div>
+                        <div class="review_form_content">
+                            <form action="#" id="review_form" class="review_form">
+                                <div class="d-flex flex-md-row flex-column align-items-start justify-content-between">
+                                    <input type="text" class="review_form_input" placeholder="Nombre" required="required">
+                                    <input type="email" class="review_form_input" placeholder="E-mail" required="required">
+                                    <input type="text" class="review_form_input" placeholder="Asunto">
                                 </div>
-                            </div>
+                                <textarea class="review_form_text" name="review_form_text" placeholder="Mensaje"></textarea>
+                                <button type="submit" class="review_form_button">Enviar</button>
+                            </form>
                         </div>
                     </div>
                 </div>
             </div>
-    </section>
-
+        </div>
+    </div>
     <footer>
-        <div class="partFooter">
-            <img src="" alt="">
-        </div>
-        <div class="partFooter">
-            <h4>Servicios</h4>
-        </div>
-        <div class="partFooter">
-            <h4>Acerca de</h4>
-            <a href="#">About 1</a>
-            <a href="#">About 2</a>
-            <a href="#">About 3</a>
-        </div>
         <div class="partFooter">
             <h4>Redes sociales</h4>
             <div class="social-media">
-                    <i class="fab fa-facebook-f"></i>
-                    <i class="fab fa-twitter"></i>
-                    <i class="fab fa-instagram"></i>
-                    <i class="fab fa-youtube"></i>
+                <ul>
+                    <li><a href="https://facebook.com" target=blank><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="https://twitter.com" target=blank><i class="fab fa-twitter"></i></a> </li>
+                    <li><a href="https://instagram.com" target=blank><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="https://youtube.com" target=blank><i class="fab fa-youtube"></i></a></li>
+                </ul>
+            </div>
+            <div class="copy">
+                <p>&copy; Copyright Clash Shoes 2020</p>
             </div>
         </div>
     </footer>
