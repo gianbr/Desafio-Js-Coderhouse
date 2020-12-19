@@ -23,10 +23,10 @@
                     <h2><a href="index.html">Clash Shoes</h2></a> 
                 </div>
                 <div class="enlaces-header">
-                    <a href="index.html">Inicio</a>
-                    <a href="#productos">Productos</a>
-                    <a href="#nosotros">Sobre Nosotros</a>
-                    <a href="#contacto">Contacto</a>
+                    <a href="index.html" onclick="ocultarNav()">Inicio</a>
+                    <a href="#productos" onclick="ocultarNav()">Productos</a>
+                    <a href="#nosotros" onclick="ocultarNav()">Sobre Nosotros</a>
+                    <a href="#contacto" onclick="ocultarNav()">Contacto</a>
                 </div>
                 <div class="hamburguer">
                     <i class="fas fa-bars"></i>
@@ -54,34 +54,32 @@
             <h2 class="titulo" id="productos">Estos son nuestros productos</h2>
             <div class="contenedor-articulo">
                 <div class="articulo" data-aos="zoom-in-right">
-                    
                         <img class="card-img-top imagenProducto" src="https://images.pexels.com/photos/4277508/pexels-photo-4277508.jpeg" alt="Card image cap">
                         <div class="card-block textoProducto">
-                            <h4 class="card-title">Nike Air Force I</h4>
-                            <p class="card-text">Precio: $8.000</p>
-                            <a href="#" data-name="Air-Force-I" data-price="8000" class="add-to-cart btn btn-primary botonProducto">Agregar al carrito</a>
+                            <!-- <h4 class="card-title">Nike Air Force I</h4>
+                            <p class="card-text">Precio: $8.000</p> -->
                         </div>
-                    
+                        <button data-name="Air-Force-I" data-price="8000" class="add-to-cart btn btn-primary botonProducto botonAgregar" value="1">Agregar al carrito</button>
                 </div>
                 <div class="articulo" data-aos="zoom-in-right">
                     
                         <img class="card-img-top imagenProducto" src="https://images.pexels.com/photos/2385477/pexels-photo-2385477.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Card image cap">
                         <div class="card-block textoProducto">
-                            <h4 class="card-title">Nike Jordan 1</h4>
-                            <p class="card-text">Precio: $15.000</p>
-                            <a href="#" data-name="Jordan-1" data-price="15000" class="add-to-cart btn btn-primary botonProducto">Agregar al carrito</a>
+                            <!-- <h4 class="card-title">Nike Jordan 1</h4>
+                            <p class="card-text">Precio: $15.000</p> -->
                         </div>
-                    
+                        <button data-name="Jordan-1" data-price="15000" class="add-to-cart btn btn-primary botonProducto botonAgregar" value="2">Agregar al carrito</button>
+
                 </div>
                 <div class="articulo" data-aos="zoom-in-right">
                     
                         <img class="card-img-top imagenProducto" src="https://images.pexels.com/photos/2404959/pexels-photo-2404959.png?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Card image cap">
                         <div class="card-block textoProducto">
-                            <h4 class="card-title">Nike Air Max</h4>
-                            <p class="card-text">Precio: $12.000</p>
-                            <a href="#" data-name="Air-Max" data-price="12000" class="add-to-cart btn btn-primary botonProducto">Agregar al carrito</a>
-                        
+                            <!-- <h4 class="card-title">Nike Air Max</h4>
+                            <p class="card-text">Precio: $12.000</p> -->
                     </div>
+                    <button data-name="Air-Max" data-price="12000" class="add-to-cart btn btn-primary botonProducto botonAgregar" value="3">Agregar al carrito</button>
+
                 </div>
             </div>
             <div>

@@ -40,14 +40,12 @@ h1 {
     font-size: 50px;
 }
 
-
 /* Header */
 header::before {
     content: "";
     display: block;
     margin-bottom: 80px;
 }
-
 
 nav {
     width: 100%;
@@ -96,7 +94,7 @@ nav h2 a:hover{
 .enlaces-header {
     font-weight: 300;
     transition: ease-in-out 0.5s;
-}
+} 
 
 .nav .enlaces-header a {
     color: #5D6678;
@@ -142,7 +140,6 @@ nav h2 a:hover{
     }
 }
 
-
 .textos-header {
     padding: 0 50px 0 0;
     color: white;
@@ -154,9 +151,6 @@ nav h2 a:hover{
     color: rgb(255, 255, 255);
     font-weight: 500;
 }
-
-
-
 
 .contenido-header a {
     margin: 28px 0 0 0;
@@ -199,6 +193,7 @@ nav h2 a:hover{
     border-radius: 10px;
     padding: 45px 30px 60px 30px;
     transition: 0.5s;
+    text-align: center;
 }
 
 .articulo:hover {
@@ -582,10 +577,8 @@ footer {
     }
 
     .nav .menudos {
-
         -webkit-clip-path: circle(150% at 100% 0);
         clip-path: circle(150% at 100% 0);
-
     }
 
     .nav .enlaces-header a {
@@ -846,6 +839,8 @@ footer {
 	position:relative;
 	top:1px;
 }
+
+
 
 .botonCarrito {
 	background:linear-gradient(to bottom, #77d42a 5%, #5cb811 100%);

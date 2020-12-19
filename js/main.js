@@ -1,3 +1,5 @@
+// Desaparecer navbar en scroll
+
 let ubicacionPrincipal = window.pageYOffset; //0
 
   AOS.init();
@@ -16,28 +18,52 @@ window.addEventListener("scroll", function(){
 // Menu
 
 let enlacesHeader = document.querySelectorAll(".enlaces-header")[0];
-let semaforo = true;
 
 document.querySelectorAll(".hamburguer")[0].addEventListener("click", function(){
-    if(semaforo){
-        document.querySelectorAll(".hamburguer")[0].style.color ="#fff";
-        semaforo= false;
-    }else{
-        document.querySelectorAll(".hamburguer")[0].style.color ="#000";
-        semaforo= true;
+    let color = $(".hamburguer i").css("color")
+    if((color == "black")){
+        $(".hamburguer i").css("color", "white")
     }
-
     enlacesHeader.classList.toggle("menudos")
 })
 
-function hacerGet(){
-    $.get(
-    'datos.json',
-    function(data, status){
-        productos = data;  
-        console.log(productos);      
-    });
-    alert("Compra exitosa!");
+let ocultarNav = () =>{
+    enlacesHeader.classList.toggle("menudos");
+    $(".hamburguer i").css("color", "black ");
+}
+
+// Ajax
+
+let datosProducto = [];
+$.get("./../datos.json", function (data){
+    datosProducto = data;
+    console.log(datosProducto);  
+    mostrarProducto(botonesAgregar, datosProducto); 
+});
+
+let botonesAgregar = document.getElementsByClassName("botonAgregar");
+console.log(botonesAgregar);    
+
+function mostrarProducto(botonAgregado, datosProducto){
+    for (let i = 0; i < botonAgregado.length; i++) {
+        let padre = $(botonAgregado[i]).parent();
+        console.log(padre);
+        for (let j = 0; j < datosProducto.length; j++) {
+            if (botonAgregado[i].value == datosProducto[j].code) {
+                $(padre)
+                .find(".textoProducto")
+                .append(
+                    "<h4>" + 
+                    datosProducto[j].product +
+                    "</h4>" +
+                    "<p>" +
+                    datosProducto[j].price +
+                    "</p>"
+                );
+            break;
+            }
+        }
+    }
 }
 
 // Carrito
@@ -57,7 +83,7 @@ var shoppingCart = (function() {
       sessionStorage.setItem('shoppingCart', JSON.stringify(cart));
     }
     
-      // Cargar carrito
+    // Cargar carrito
     function loadCart() {
       cart = JSON.parse(sessionStorage.getItem('shoppingCart'));
     }
@@ -65,7 +91,6 @@ var shoppingCart = (function() {
       loadCart();
     }
     
-  
     // =============================
     // =============================
     var obj = {};
@@ -179,7 +204,7 @@ var shoppingCart = (function() {
     displayCart();
   });
   
-  
+  // Mostrar carrito
   function displayCart() {
     var cartArray = shoppingCart.listCart();
     var output = "";
@@ -187,13 +212,13 @@ var shoppingCart = (function() {
       output += "<tr>"
         + "<td>" + cartArray[i].name + "</td>" 
         + "<td>(" + cartArray[i].price + ")</td>"
-        + "<td><div class='input-group'><button class='minus-item input-group-addon btn btn-primary' data-name=" + cartArray[i].name + ">-</button>"
-        + "<input type='number' class='item-count form-control' data-name='" + cartArray[i].name + "' value='" + cartArray[i].count + "'>"
-        + "<button class='plus-item btn btn-primary input-group-addon' data-name=" + cartArray[i].name + ">+</button></div></td>"
-        + "<td><button class='delete-item btn btn-danger' data-name=" + cartArray[i].name + ">X</button></td>"
-        + " = " 
-        + "<td>" + cartArray[i].total + "</td>" 
-        +  "</tr>";
+        + "<td><div class='input-group'><button class='minus-item input-group-addon btn btn-primary' data-name=" + cartArray[i].name + ">-</button>"    // DAR ESTILO
+        + "<input type='number' class='item-count form-control' data-name='" + cartArray[i].name + "' value='" + cartArray[i].count + "'>"              // *********************
+        + "<button class='plus-item btn btn-primary input-group-addon' data-name=" + cartArray[i].name + ">+</button></div></td>"                       // *********************
+        + "<td><button class='delete-item btn btn-danger' data-name=" + cartArray[i].name + ">X</button></td>"                                          // *********************
+        + " = "                                                                                                                                         // *********************
+        + "<td>" + cartArray[i].total + "</td>"                                                                                                         // *********************
+        +  "</tr>";                                                                                                                                     // *********************
     }
     $('.show-cart').html(output);
     $('.total-cart').html(shoppingCart.totalCart());
@@ -201,13 +226,11 @@ var shoppingCart = (function() {
   }
   
   // Boton borrar
-  
   $('.show-cart').on("click", ".delete-item", function(event) {
     var name = $(this).data('name')
     shoppingCart.removeItemFromCartAll(name);
     displayCart();
   })
-  
   
   // Restar 1
   $('.show-cart').on("click", ".minus-item", function(event) {
@@ -215,6 +238,7 @@ var shoppingCart = (function() {
     shoppingCart.removeItemFromCart(name);
     displayCart();
   })
+
   // Sumar 1
   $('.show-cart').on("click", ".plus-item", function(event) {
     var name = $(this).data('name')

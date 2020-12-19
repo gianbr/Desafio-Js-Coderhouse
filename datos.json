@@ -1,1 +1,17 @@
-[{"product":"air-force", "price":"8000"},{"product":"jordan", "price":"15000"},{"product":"air-max", "price":"12000"}]
+[
+    {
+        "product": "Nike Air Force I",
+        "price": "$8000",
+        "code": "1"
+    },
+    {
+        "product": "Nike Jordan 1",
+        "price": "$15000",
+        "code": "2"
+    },
+    {
+        "product": "Nike Air Max",
+        "price": "$12000",
+        "code": "3"
+    }
+]
