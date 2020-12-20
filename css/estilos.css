@@ -187,7 +187,7 @@ nav h2 a:hover{
 }
 
 .articulo {
-    width: 29%;
+    width: 39%;
     background: #fff;
     margin-bottom: 30px;
     border-radius: 10px;
@@ -470,6 +470,7 @@ footer {
 
     .articulo {
         width: 60%;
+        height: 60%;
     }
 
     /* Questions */
@@ -657,14 +658,19 @@ footer {
         align-self: center;
     }
 
-    h4.card-title{
-        font-size: 20px;
+    /* .card-block{
+        font-size: 5px;
     }
+
+    .textoProducto p{
+        font-size: 20px;
+    } */
 }
 
-.card-block{
+/* .card-block{
     text-align: center;
-}
+    font-si
+} */
 
 /* Formulario */
 
@@ -969,8 +975,8 @@ footer {
 .product-price{
     /* padding-right: 0!important;
     padding-left: 0!important; */
-    margin: auto;
-} */
+    /* margin: auto;
+} */ 
 
 
 

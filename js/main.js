@@ -35,7 +35,7 @@ let ocultarNav = () =>{
 // Ajax
 
 let datosProducto = [];
-$.get("https://gianbr.github.io/Desafio-Js-Coderhouse/datos.json", function (data){
+$.get("../datos.json", function (data){
     datosProducto = data;
     console.log(datosProducto);  
     mostrarProducto(botonesAgregar, datosProducto); 
@@ -53,10 +53,10 @@ function mostrarProducto(botonAgregado, datosProducto){
                 $(padre)
                 .find(".textoProducto")
                 .append(
-                    "<h4>" + 
+                    "<h4 class='card-title'>" + 
                     datosProducto[j].product +
                     "</h4>" +
-                    "<p>" +
+                    "<p class='card-text'>" +
                     datosProducto[j].price +
                     "</p>"
                 );
