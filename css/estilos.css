@@ -841,7 +841,6 @@ footer {
 }
 
 
-
 .botonCarrito {
 	background:linear-gradient(to bottom, #77d42a 5%, #5cb811 100%);
 	background-color:#77d42a;
@@ -909,4 +908,82 @@ footer {
 .botonCerrar:active {
 	position:relative;
 	top:1px;
+}
+
+.delete-item {
+	background:linear-gradient(to bottom, #f24537 5%, #c62d1f 100%);
+	background-color:#f24537;
+	border-radius:35px;
+	border:1px solid #d02718;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:8px 15px;
+	text-decoration:none;
+}
+.delete-item:hover {
+	background:linear-gradient(to bottom, #c62d1f 5%, #f24537 100%);
+	background-color:#c62d1f;
+}
+.delete-item:active {
+	position:relative;
+	top:1px;
+}
+
+.minus-item, .plus-item {
+	background:linear-gradient(to bottom, #f9f9f9 5%, #bdbdbd 100%);
+	background-color:#f9f9f9;
+	border-radius:35px;
+	border:1px solid #ccc4cc;
+	display:inline-block;
+	cursor:pointer;
+	color:#3d3d3d;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:8px 15px;
+	text-decoration:none;
+}
+.minus-item:hover, .plus-item:hover {
+	background:linear-gradient(to bottom, #bdbdbd 5%, #f9f9f9 100%);
+	background-color:#bdbdbd;
+}
+.minus-item:active, .plus-item:active {
+	position:relative;
+	top:1px;
+}
+
+/* table td{
+    max-width: 30%;
+    width: 30%;
+    text-align: center;
+} */
+
+/* .product-name{
+    margin: auto;
+}
+
+.product-price{
+    /* padding-right: 0!important;
+    padding-left: 0!important; */
+    margin: auto;
+} */
+
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+@media only screen and (min-width: 991px){
+    .product-display{
+        margin: auto;
+        width: 40%;
+        text-align: center;
+    }
 }
